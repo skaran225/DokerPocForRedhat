@@ -1,0 +1,11 @@
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\DockerPocForDotNet.exe
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\appsettings.Development.json
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\appsettings.json
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\DockerPocForDotNet.dll
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\DockerPocForDotNet.deps.json
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\DockerPocForDotNet.runtimeconfig.json
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\DockerPocForDotNet.pdb
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\Microsoft.OpenApi.dll
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\karansingh04\Documents\DockerPocForDotNet\bin\Release\net6.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

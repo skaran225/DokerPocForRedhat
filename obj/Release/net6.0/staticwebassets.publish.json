@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "NFt1yK81bIFoL6XIX3jYlCjQ0zde3/nGgDS7nIDGZR4=",
+  "Source": "DockerPocForDotNet",
+  "BasePath": "_content/DockerPocForDotNet",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

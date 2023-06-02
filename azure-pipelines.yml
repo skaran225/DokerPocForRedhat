@@ -44,7 +44,7 @@ steps:
 
     version: '4.12.0'
 
-    cmd: 'oc new-app --image-stream="openshift/dotnet:6.0" https://github.com/skaran225/Azuredemo --name=OpenShiftGitproj1'
+    cmd: 'oc new-app --image-stream="openshift/dotnet:6.0" https://github.com/skaran225/Azuredemo --name=demo1'
 
     #cmd: 'oc new-app sanju333/aspapp:$(Build.BuildId) --name=<app-name>'   #If docker Image is used for deployment
 
@@ -64,7 +64,7 @@ steps:
 
     version: '4.12.0'
 
-    cmd: 'oc expose svc/OpenShiftGitproj1'
+    cmd: 'oc expose svc/demo1'
 
     ignoreFlag: true
 
@@ -82,4 +82,4 @@ steps:
 
     version: '4.12.0'
 
-    cmd: 'oc start-build OpenShiftGitproj1 --follow'
+    cmd: 'oc start-build demo1 --follow'

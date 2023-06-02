@@ -1,0 +1,43 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+# - task: Docker@2			#if Docker Image is used for deployment
+#   displayName: docker_build_push
+#   inputs:
+#     containerRegistry: 'Docker Hub'         #DockerHub Service Connection
+#     repository: sanju333/aspapp
+#     command: 'buildAndPush'
+#     Dockerfile: 'Dockerfile'
+#     tags: '$(Build.BuildId)'
+
+- task: oc-cmd@3
+  displayName: 'create new app'
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift'
+    version: '4.12.0'
+    cmd: 'oc new-app --image-stream="openshift/dotnet:6.0" https://github.com/skaran225/DokerPocForRedhat.git#main --name=OpenShiftGitproj'
+    #cmd: 'oc new-app sanju333/aspapp:$(Build.BuildId) --name=<app-name>'		#If docker Image is used for deployment
+    ignoreFlag: true
+
+- task: oc-cmd@3
+  displayName: 'create service'
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift'
+    version: '4.12.0'
+    cmd: 'oc expose svc/OpenShiftGitproj'
+    ignoreFlag: true
+
+- task: oc-cmd@3
+  displayName: 'Start new build'
+  inputs:
+    connectionType: 'OpenShift Connection Service'
+    openshiftService: 'OpenShift'
+    version: '4.12.0'
+    cmd: 'oc start-build OpenShiftGitproj --follow'
